@@ -1,11 +1,12 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const app = express();
 const dal = require('./dal');
 
-app.use(express.static(path.join(__dirname, 'front/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
-/*app.get('/', (req, res) => {
+/*/app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'front/build/index.html'));
 });*/
 
@@ -161,7 +162,12 @@ app.get('/account/create/:name/:email/:password', function (req, res) {
       })
 });
 
-const port = process.env.PORT || 5000;
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });

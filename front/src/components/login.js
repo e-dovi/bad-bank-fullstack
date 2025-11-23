@@ -9,15 +9,15 @@ const provider = new GoogleAuthProvider();
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.authDomain,
-  projectId: process.env.projectId,
-  storageBucket: process.env.storageBucket,
-  messagingSenderId: process.env.SenderID,
-  appId: process.env.appId
+  apiKey: "AIzaSyC3MZFcJB_w3H3eYIHT6jiFctTHOgKWT3Q",
+  authDomain: "bad-bank-a68cd.firebaseapp.com",
+  projectId: "bad-bank-a68cd",
+  storageBucket: "bad-bank-a68cd.firebasestorage.app",
+  messagingSenderId: "473007524717",
+  appId: "1:473007524717:web:9d188134311929484aa864"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -203,7 +203,7 @@ function Login(){
       }, 3000);
       setGDisabled(false);
     })
-  }
+  } 
   return (
    <>
     <Navbar />
