@@ -1,18 +1,87 @@
-# Bad Bank
+# Bad Bank Full‑Stack Application
+Overview
+Bad Bank is a full‑stack banking application built with React (front‑end), Express (back‑end), and MongoDB (database). It allows users to create accounts, log in, and manage balances with secure authentication via Firebase Auth (Google Sign‑In + Email/Password).
 
-This project is a banking application that allows users to create and manage their accounts. All user information will be stored in MongoDB.
+The project is fully Dockerized for consistent deployments and can be hosted on platforms like Render, Fly.io, Railway, or Heroku.
 
-### `docker compose up`
+✨ Features
+User Authentication
 
-This command sets up the project in a docker container locally. The server will be listening on port 5000.
+Email/password login with validation
 
+Google Sign‑In via Firebase Auth
 
-Copyright (c) 2024 elvis dovi
+Account Management
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Create new accounts
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Login/logout with persistent sessions
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Balance updates and transaction history
 
+Security
 
+Firebase Auth handles credential flows
+
+Password validation (min 8 chars, no whitespace)
+
+LocalStorage used only for non‑sensitive identifiers
+
+Deployment
+
+Dockerfile for containerized builds
+
+Express serves React build + API routes
+
+Environment variables injected at runtime (MONGODB_URI, Firebase keys)
+
+Hosting
+
+Works on Render (Free/Hobby tiers), Fly.io, Railway, or Heroku
+
+Front‑end can be deployed separately on Vercel/Netlify for instant load
+
+🛠️ Tech Stack
+Front‑end: React, Bootstrap, FontAwesome
+
+Back‑end: Node.js, Express
+
+Database: MongoDB Atlas
+
+Auth: Firebase Authentication (Google + Email/Password)
+
+Containerization: Docker
+
+Deployment: Render, Fly.io, Railway, Heroku
+
+🚀 Getting Started
+Prerequisites
+Node.js v18+
+
+Docker installed
+
+MongoDB Atlas cluster (or local MongoDB)
+
+Firebase project with Authentication enabled
+
+Local Development
+# Clone repo
+git clone https://github.com/e-dovi/bad-bank-fullstack.git
+cd bad-bank-fullstack
+
+# Install dependencies
+npm install
+
+# Run locally
+npm start
+
+# Build image
+docker build -t bad-bank .
+
+# Run container
+docker run -p 5000:5000 --env-file .env bad-bank
+🔑 Environment Variables
+Create a .env file with:
+MONGODB_URI=your-mongodb-uri
+PORT=5000
+Firebase config stays in client code (not secret)
