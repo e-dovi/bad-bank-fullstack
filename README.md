@@ -1,60 +1,65 @@
 # Bad Bank Full‑Stack Application
+
 Overview
 Bad Bank is a full‑stack banking application built with React (front‑end), Express (back‑end), and MongoDB (database). It allows users to create accounts, log in, and manage balances with secure authentication via Firebase Auth (Google Sign‑In + Email/Password).
 
 The project is fully Dockerized for consistent deployments and can be hosted on platforms like Render, Fly.io, Railway, or Heroku.
 
-✨ Features
-User Authentication
+👉 Live Demo: https://bad-bank-jcfo.onrender.com
 
-Email/password login with validation
+## ✨ Features
 
-Google Sign‑In via Firebase Auth
+- User Authentication
 
-Account Management
+- Email/password login with validation
 
-Create new accounts
+- Google Sign‑In via Firebase Auth
 
-Login/logout with persistent sessions
+- Account Management
 
-Balance updates and transaction history
+- Create new accounts
 
-Security
+- Login/logout with persistent sessions
 
-Firebase Auth handles credential flows
+- Balance updates and transaction history
 
-Password validation (min 8 chars, no whitespace)
+- Security
 
-LocalStorage used only for non‑sensitive identifiers
+- Firebase Auth handles credential flows
 
-Deployment
+- Password validation (min 8 chars, no whitespace)
 
-Dockerfile for containerized builds
+- LocalStorage used only for non‑sensitive identifiers
 
-Express serves React build + API routes
+- Deployment
 
-Environment variables injected at runtime (MONGODB_URI, Firebase keys)
+- Dockerfile for containerized builds
 
-Hosting
+- Express serves React build + API routes
 
-Works on Render (Free/Hobby tiers), Fly.io, Railway, or Heroku
+- Environment variables injected at runtime (MONGODB_URI, Firebase keys)
 
-Front‑end can be deployed separately on Vercel/Netlify for instant load
+- Hosting
 
-🛠️ Tech Stack
-Front‑end: React, Bootstrap, FontAwesome
+- Works on Render (Free/Hobby tiers), Fly.io, Railway, or Heroku
 
-Back‑end: Node.js, Express
+- Front‑end can be deployed separately on Vercel/Netlify for instant load
 
-Database: MongoDB Atlas
+## 🛠️ Tech Stack
 
-Auth: Firebase Authentication (Google + Email/Password)
+- Front‑end: React, Bootstrap, FontAwesome
 
-Containerization: Docker
+- Back‑end: Node.js, Express
 
-Deployment: Render, Fly.io, Railway, Heroku
+- Database: MongoDB Atlas
 
-🚀 Getting Started
+- Auth: Firebase Authentication (Google + Email/Password)
+
+- Containerization: Docker
+
+- Deployment: Render, Fly.io, Railway, Heroku
+
+## 🚀 Getting Started
 Prerequisites
 Node.js v18+
 
@@ -65,6 +70,7 @@ MongoDB Atlas cluster (or local MongoDB)
 Firebase project with Authentication enabled
 
 Local Development
+
 # Clone repo
 git clone https://github.com/e-dovi/bad-bank-fullstack.git
 cd bad-bank-fullstack
