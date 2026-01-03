@@ -1,11 +1,11 @@
 # Bad Bank Full‑Stack Application
 
-Overview
 Bad Bank is a full‑stack banking application built with React (front‑end), Express (back‑end), and MongoDB (database). It allows users to create accounts, log in, and manage balances with secure authentication via Firebase Auth (Google Sign‑In + Email/Password).
 
 The project is fully Dockerized for consistent deployments and can be hosted on platforms like Render, Fly.io, Railway, or Heroku.
 
-👉 Live Demo: https://bad-bank-jcfo.onrender.com
+### 🚀 Live Demo  
+👉 **https://bad-bank-jcfo.onrender.com**
 
 ## ✨ Features
 
